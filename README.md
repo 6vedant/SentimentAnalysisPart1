@@ -8,13 +8,16 @@
 
 
 **Introduction**
+
 We often need to calculate the sentiment of enormous text data which are generated daily to track the user’s opinion on a particular topic. We can visualize the sentiment values for a particular geographic location which helps businesses for better decision making.
 In this article, we will load the tweet dataset into GridDB, perform sentiment analysis on the dataset, and visualize using matplotlib. 
 
 **Prerequisites** 
+
 We will use the GridDb instance with the python3, matplotlib, pandas for sentiment calculation and Visualization. The tweet dataset is obtained from web scraping of tweets from 2013-2017 on the topic of “Rana Plaza”. 
 
 **Dataset Schema**
+
 In 2013, the Rana Plaza building collapse in Bangladesh killed more than 1100 fashion workers and tarnished the image of big fashion brands like Zara, H&M, Gap, Benetton, etc. To study how the consumers reacted to these fashion brands, we will perform sentiment analysis on the tweets mined from 2013-2018, on the topic of “Rana Plaza”.
 We will consider the below attributes from the excel dataset file to be used in the GridDB container. 
  
@@ -130,6 +133,7 @@ tweets_columns.put_rows(tweet_data_df)
 We have successfully inserted the data in griddb collections in the given dataset schema, after preprocessing it. 
 
 **Retrieving Data from the Containers**
+
 We will fetch the data using get_container method and then extract the data by querying that collection
 
 
@@ -175,7 +179,9 @@ query = tweet_data.query("select *")
 We can pass any suitable query to fetch data for some conditions. We can further map the list to a data-frame.
 
 **Conclusion:**
+
 In this part 1 of the blog, we discussed how to preprocess the tweets data for sentiment analytics, from the excel file. Further, we used GridDB containers to create collections and queried throughout to extract the required attributes.
 
 **Source Code**
+
 [GitHub](https://github.com/6vedant/SentimentAnalysisPart1)
